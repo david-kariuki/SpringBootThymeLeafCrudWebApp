@@ -1,10 +1,9 @@
-package com.project.SpringBootThymeLeafCrudWebApp.model;
+package com.project.SpringBootThymeLeafCrudWebApp.models;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "employees")
-
 public class Employee {
 
     @Id
@@ -12,7 +11,7 @@ public class Employee {
     private long id;
 
     @Column(name = "first_name")
-    private String firstname;
+    private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
@@ -29,12 +28,12 @@ public class Employee {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstname) {
+        this.firstName = firstname;
     }
 
     public String getLastName() {
