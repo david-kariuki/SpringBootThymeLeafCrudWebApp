@@ -1,6 +1,6 @@
 package com.project.SpringBootThymeLeafCrudWebApp.repository;
 
-import com.project.SpringBootThymeLeafCrudWebApp.model.Employee;
+import com.project.SpringBootThymeLeafCrudWebApp.models.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
