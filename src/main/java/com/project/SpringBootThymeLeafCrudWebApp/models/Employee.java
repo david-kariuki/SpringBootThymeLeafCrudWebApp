@@ -1,7 +1,11 @@
 package com.project.SpringBootThymeLeafCrudWebApp.models;
 
+import org.hibernate.annotations.CollectionId;
+
 import javax.persistence.*;
 
+
+@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Table(name = "employees")
 public class Employee {
@@ -19,6 +23,14 @@ public class Employee {
     @Column(name = "email_address")
     private String emailAddress;
 
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "gender")
+    private String gender;
 
     public long getId() {
         return id;
@@ -50,5 +62,29 @@ public class Employee {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
