@@ -3,28 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>Employee Management System</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <style>
+        .td-cs {
+            width: 25%;
+            align-self: center;
+            align-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
 <div class="container">
     <h1>Employee Management System</h1>
     <hr>
-    <h2>Save Employee</h2>
+
+    <a th:href="@{/}" class="btn btn-info">Back to employee list</a>
+    <br/>
+    <hr/>
+    <br/>
+
+    <label>Register New Employee</label>
+    <br/>
 
     <form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
 
-        <input type="text" th:field="*{firstName}" placeholder="Employee : First Name"
-               class="form-control">
-        <input type="text" th:field="*{lastName}" placeholder="Employee : Last Name"
-        class="form-control">
-        <input type="text" th:field="*{emailAddress}" placeholder="Employee : Email Address"
-               class="form-control">
+        <table class="table table-responsive-sm">
+            <thead></thead>
 
-        <button type="submit" class="btn btn-info">Save</button>
+            <tbody>
+                <tr>
+                    <td class="table-dark td-cs">Employees First Name</td>
+                    <td class="table-dark td-cs">Employees Last Name</td>
+                    <td class="table-dark td-cs">Employees Email Address</td>
+                </tr>
+                <tr>
+                    <td class="table-dark td-cs">
+                        <input type="text" th:field="*{firstName}" placeholder="Input first name"
+                               class="form-control" th:required="required">
+                    </td>
+                    <td class="table-dark td-cs">
+                        <input type="text" th:field="*{lastName}" placeholder="Input last name"
+                               class="form-control" th:required="required">
+                    </td>
+                    <td class="table-dark td-cs">
+                        <input type="text" th:field="*{emailAddress}" placeholder="Input email address"
+                               class="form-control" th:required="required">
+                    </td>
+                </tr>
+
+                <tr th:height="30px"></tr>
+
+                <tr>
+                    <td class="table-dark td-cs">Employees Phone Number</td>
+                    <td class="table-dark td-cs">Employees Address</td>
+                    <td class="table-dark td-cs">Employees Gender</td>
+                </tr>
+                <tr>
+
+                    <td class="table-dark td-cs">
+                        <input type="text" th:field="*{phoneNumber}" placeholder="Phone number"
+                               class="form-control" th:required="required">
+                    </td>
+                    <td class="table-dark td-cs">
+                        <input type="text" th:field="*{address}" placeholder="Address"
+                               class="form-control" th:required="required">
+                    </td>
+                    <td class="table-dark td-cs">
+                        <select th:field="*{gender}" required="required">
+                            <option th:value="n" th:text="Select-Gender" th:disabled="disabled">Select Gender</option>
+                            <option th:value="M" th:text="Male"></option>
+                            <option th:value="F" th:text="Female"></option>
+                            <option th:value="RNS" th:text="Rather-Not-Say"></option>
+                        </select>
+                    </td>
+                <tr/>
+            </tbody>
+
+            <tfoot>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-info">Save Employee</button>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            </tfoot>
+        </table>
     </form>
 </div>
 </body>
