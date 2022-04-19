@@ -3,12 +3,10 @@ package com.project.SpringBootThymeLeafCrudWebApp.controllers;
 import com.project.SpringBootThymeLeafCrudWebApp.models.Employee;
 import com.project.SpringBootThymeLeafCrudWebApp.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class EmployeeController {
@@ -36,5 +34,20 @@ public class EmployeeController {
         // Save employee to database
         employeeService.saveEmployee(employee);
         return "redirect:/";
+    }
+
+    @GetMapping("/showUpdateForm/{id}")
+    public String showUpdateForm(@PathVariable (value = "id") long id, Model model) {
+        Employee employee = employeeService.getEmployeeById(id); // Get employee from the service
+        model.addAttribute("employeeById", employee); // Set employee object to model
+        return "update_employee";
+    }
+
+    @GetMapping("/deleteEmployee/{id}")
+    public  String deleteEmployee(@PathVariable (value = "id") long id, Model model) {
+
+        boolean deleted = employeeService.deleteEmployeeById(id); // Get employee from the service
+        model.addAttribute("deleted", deleted); // Add status to model
+        return "redirect:/"; // Redirect
     }
 }
