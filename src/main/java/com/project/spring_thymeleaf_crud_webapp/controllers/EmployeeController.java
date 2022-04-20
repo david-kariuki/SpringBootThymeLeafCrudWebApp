@@ -1,9 +1,8 @@
-package com.project.SpringBootThymeLeafCrudWebApp.controllers;
+package com.project.spring_thymeleaf_crud_webapp.controllers;
 
-import com.project.SpringBootThymeLeafCrudWebApp.models.Employee;
-import com.project.SpringBootThymeLeafCrudWebApp.services.EmployeeService;
+import com.project.spring_thymeleaf_crud_webapp.models.Employee;
+import com.project.spring_thymeleaf_crud_webapp.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,6 @@
-package com.project.SpringBootThymeLeafCrudWebApp.services;
+package com.project.spring_thymeleaf_crud_webapp.services;
 
-import com.project.SpringBootThymeLeafCrudWebApp.models.Employee;
-import org.springframework.stereotype.Service;
+import com.project.spring_thymeleaf_crud_webapp.models.Employee;
 
 import java.util.List;
 

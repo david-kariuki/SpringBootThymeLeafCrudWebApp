@@ -1,8 +1,8 @@
-package com.project.SpringBootThymeLeafCrudWebApp.servicesimpl;
+package com.project.spring_thymeleaf_crud_webapp.servicesimpl;
 
-import com.project.SpringBootThymeLeafCrudWebApp.models.Employee;
-import com.project.SpringBootThymeLeafCrudWebApp.repository.EmployeeRepository;
-import com.project.SpringBootThymeLeafCrudWebApp.services.EmployeeService;
+import com.project.spring_thymeleaf_crud_webapp.models.Employee;
+import com.project.spring_thymeleaf_crud_webapp.repository.EmployeeRepository;
+import com.project.spring_thymeleaf_crud_webapp.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

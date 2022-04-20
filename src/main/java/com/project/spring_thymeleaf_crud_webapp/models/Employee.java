@@ -1,6 +1,4 @@
-package com.project.SpringBootThymeLeafCrudWebApp.models;
-
-import org.hibernate.annotations.CollectionId;
+package com.project.spring_thymeleaf_crud_webapp.models;
 
 import javax.persistence.*;
 
